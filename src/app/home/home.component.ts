@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
       for (var i = 0; i < 5; i++) {
         this.dispVods.push({
           url:
-            "http://www.youtube.com/embed/" +
+            "https://www.youtube.com/embed/" +
             this.vods[i].snippet.resourceId.videoId,
           description: this.vods[i].snippet.description
         });

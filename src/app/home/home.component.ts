@@ -7,13 +7,7 @@ import { Subscription } from "rxjs";
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.css"]
 })
-/*
-  ToDo:
-  Fix Bug -
-    Load Home
-    Move to Teams
-    Return to Home - Video autoplays
-*/
+
 export class HomeComponent implements OnInit {
   constructor(private dbService: DbService) {}
 

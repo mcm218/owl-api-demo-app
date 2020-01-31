@@ -1,0 +1,68 @@
+<div class="container" style="margin-top: 100px;">
+  <div class="row filters">
+    <div class="col-sm-4 my-auto">
+      <mat-form-field color="primary" appearance="standard">
+        <mat-label>
+          Select Team
+        </mat-label>
+        <mat-select
+          disableOptionCentering
+          [(value)]="selectedTeam"
+          (selectionChange)="filterMatches()"
+        >
+          <mat-option [value]="">
+            Clear
+          </mat-option>
+          <mat-option *ngFor="let team of teams" [value]="team.id">
+            {{ team.name }}
+          </mat-option>
+          <mat-option [value]="">
+            Clear
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-sm-8 my-auto">
+      <input
+        type="text"
+        ngxDaterangepickerMd
+        [(ngModel)]="selected"
+        [showCustomRangeLabel]="true"
+        [alwaysShowCalendars]="alwaysShowCalendars"
+        [ranges]="ranges"
+        [showClearButton]="true"
+        [linkedCalendars]="true"
+        [locale]="{ applyLabel: 'Done' }"
+        (datesUpdated)="filterMatches()"
+        [keepCalendarOpeningWithRange]="keepCalendarOpeningWithRange"
+        [showRangeLabelOnInput]="showRangeLabelOnInput"
+        class="form-control"
+        placeholder="Select Date Range"
+      />
+    </div>
+  </div>
+  <div
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="50"
+    (scrolled)="onScroll()"
+  >
+  <div class="card" *ngFor="let match of dispMatches">
+    <a routerLink="../matches/{{ match.match.id }}">
+      <div class="row">
+        <p class="col-sm">
+          {{ match.match.startDate | date: "MMMM d, y h:mm a" }}
+        </p>
+      </div>
+      <div class="row card-body">
+        <div class="col-sm-6 my-auto">
+          <img width="150" src="{{ match.teamA.logo.mainName.svg }}" />
+        </div>
+        <div class="col-sm-6 my-auto">
+          <img width="150" src="{{ match.teamB.logo.mainName.svg }}" />
+        </div>
+      </div>
+    </a>
+  </div>
+  </div>
+</div>

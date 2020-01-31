@@ -1,0 +1,33 @@
+<hr />
+<p>Comments</p>
+<div
+  class="overflow-auto border rounded"
+  style="max-height: 1000px; min-height: 100px;"
+>
+  <div class="angular-with-newlines" *ngFor="let comment of comments">
+    <div class="row">
+      <div class="col-sm-3">
+        ({{ comment.date | date: "M/d/y h:mm a" }}) {{ comment.username }}:
+      </div>
+      <div class="col-sm-9">
+        {{ comment.comment }}
+      </div>
+    </div>
+  </div>
+</div>
+<form
+  [formGroup]="addCommentForm"
+  (ngSubmit)="addComment(addCommentForm.value.comment)"
+  *ngIf="authenticated"
+>
+  <div class="form-group">
+    <label for="comment"></label>
+    <textarea
+      formControlName="comment"
+      class="form-control"
+      id="comment"
+      rows="3"
+    ></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

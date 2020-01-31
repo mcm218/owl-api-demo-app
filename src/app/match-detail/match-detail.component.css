@@ -1,0 +1,29 @@
+.card {
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(76, 81, 85);
+}
+p {
+  text-align: center;
+  color: white;
+}
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 70px;
+}
+img {
+  padding-bottom: 20px;
+}
+.col-sm-6,
+.col-sm-4,
+.col-sm-1 {
+  text-align: center;
+}
+
+.gamesList {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}

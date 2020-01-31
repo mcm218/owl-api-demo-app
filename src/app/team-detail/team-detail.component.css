@@ -1,0 +1,17 @@
+td {
+  list-style: none;
+  color: white;
+  text-align: start;
+  text-align: center;
+}
+table {
+  max-width: 200px;
+  margin: 0 auto;
+}
+div {
+  text-align: center;
+}
+.btn {
+  margin: 20px;
+  color: white;
+}

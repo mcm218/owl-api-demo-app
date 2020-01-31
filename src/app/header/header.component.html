@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-md fixed-top">
+  <a class="navbar-brand" routerLink=""
+    ><img
+      width="60"
+      src="https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Overwatch_League_logo.svg/1200px-Overwatch_League_logo.svg.png"
+  /></a>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarCollapse"
+    aria-controls="navbarCollapse"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="">HOME</a>
+      </li>
+      <li class="dropdown nav-item">
+        <a class="nav-link" routerLink="/teams">TEAMS</a>
+        <ul class="dropdown-content text-left scrollable-menu">
+          <div class="nav-item" *ngFor="let team of teams; let i = index">
+            <a class="nav-link" routerLink="teams/{{ team.id }}">{{
+              team.name
+            }}</a>
+          </div>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/players">PLAYERS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/schedule">SCHEDULE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/matches">HISTORY</a>
+      </li>
+    </ul>
+    <div *ngIf="!authenticated" class="nav-item dropdown-container dropleft">
+      <button
+        class="btn nav-link dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        LOGIN
+      </button>
+      <!-- <a class="nav-link" routerLink="/login">LOGIN</a> -->
+      <app-login></app-login>
+    </div>
+    <div *ngIf="!authenticated" class="nav-item dropdown-container dropleft">
+      <button
+        class="btn nav-link dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        SIGNUP
+      </button>
+      <app-signup></app-signup>
+    </div>
+    <div *ngIf="authenticated" class="nav-item dropdown-container">
+      <button
+        class="btn nav-link dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <fa-icon [icon]="faUser"></fa-icon>
+      </button>
+      <app-user-tab></app-user-tab>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,91 @@
+.card {
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(76, 81, 85);
+}
+p {
+  text-align: center;
+  color: white;
+}
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+img {
+  padding-bottom: 20px;
+}
+.col-sm-5,
+.col-sm-2,
+.col-sm-1 {
+  text-align: center;
+}
+
+mat-label {
+  color: #647578;
+}
+
+mat-select {
+  color: white;
+}
+
+::ng-deep .mat-form-field {
+  .mat-input-element {
+    color: white;
+  }
+  .mat-form-field-label {
+    color: white;
+  }
+  .mat-form-field-underline {
+    background-color: white;
+  }
+  .mat-form-field-ripple {
+    background-color: white;
+  }
+  .mat-form-field-required-marker {
+    color: white;
+  }
+}
+
+::ng-deep .mat-form-field.mat-focused {
+  .mat-form-field-label {
+    color: white;
+  }
+  .mat-form-field-ripple {
+    background-color: white;
+  }
+  .mat-form-field-required-marker {
+    color: white;
+  }
+  .mat-input-element {
+    color: white;
+  }
+}
+
+::ng-deep .mat-select-arrow {
+  color: rgba(0, 0, 0, 0);
+}
+
+::ng-deep .mat-select-value {
+  color: white;
+}
+
+mat-option {
+  background-color: rgb(76, 81, 85);
+  color: white;
+}
+
+.filters {
+  margin: 0 10px;
+  background-color: rgb(76, 81, 85);
+  border-radius: 2px;
+}
+
+input {
+  background-color: rgb(76, 81, 85);
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid white;
+  color: white;
+}

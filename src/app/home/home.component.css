@@ -1,0 +1,18 @@
+iframe {
+  margin: 0 auto;
+  width: 720px;
+  height: 405px;
+  border: none;
+  display: block;
+}
+p {
+  color: white;
+  padding: 20px 32px;
+}
+.card {
+  margin: 0 auto;
+  width: 720px;
+  border-radius: 0 !important;
+  border: none;
+  background-color: rgb(76, 81, 85);
+}

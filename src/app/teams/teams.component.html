@@ -1,0 +1,11 @@
+<div class="container" style="padding-top: 100px;">
+  <div class="d-flex justify-content-center flex-wrap">
+    <div *ngFor="let team of teams" class="card">
+      <div class="card-body">
+        <a routerLink="{{ team.id }}">
+          <img height="175" src="{{ team.logo.mainName.svg }}" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

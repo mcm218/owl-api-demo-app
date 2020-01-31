@@ -1,0 +1,11 @@
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Bottom of button */
+  width: 300px;
+  right: 0;
+}
+.btn {
+  background-color: rgb(250, 156, 29);
+  color: white;
+  border: none;
+}

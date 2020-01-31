@@ -1,0 +1,30 @@
+<div class="container" style="margin-top: 100px;">
+  <div class="d-flex justify-content-center flex-wrap">
+    <div
+      class="card"
+      [ngStyle]="{ 'border-color': team.colors.secondary.color }"
+      *ngFor="let team of teams; let i = index"
+    >
+      <div class="row row-space">
+        <div class="col-sm-4 text-center">
+          <a href="{{ team.website }}">
+            <img
+              class="img-fluid"
+              style="max-height: 200px;"
+              src="{{ team.logo.main.svg }}"
+            />
+          </a>
+        </div>
+        <div class="col-sm-8 my-auto text-center">
+          <div class="row">
+            <div class="col-sm-5" *ngFor="let player of team.players">
+              <a [routerLink]="player.id"
+                >#{{ player.number }} - {{ player.name }}</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

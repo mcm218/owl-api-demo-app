@@ -1,0 +1,13 @@
+.angular-with-newlines {
+  white-space: pre-wrap;
+}
+.col-sm-3 {
+  text-align: end;
+}
+.col-sm-9 {
+  text-align: start;
+}
+p {
+  text-align: left;
+  color: white;
+}

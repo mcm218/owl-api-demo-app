@@ -1,0 +1,26 @@
+<div class="container" style="margin-top: 100px;">
+  <div *ngIf="match && teams" class="card">
+    <div class="row">
+      <p class="col-sm">
+        {{ match.startDate | date: "MMMM d, y h:mm a" }}
+      </p>
+    </div>
+    <div class="row card-body">
+      <div class="col-sm-4 my-auto">
+        <img height="175" src="{{ teams[0].logo.mainName.svg }}" />
+      </div>
+      <div class="col-sm-4 my-auto">
+        <h1>{{ match.scores[0].value }} - {{ match.scores[1].value }}</h1>
+      </div>
+      <div class="col-sm-4 my-auto">
+        <img height="175" src="{{ teams[1].logo.mainName.svg }}" />
+      </div>
+    </div>
+    <div class="gamesList" *ngFor="let game of match.games">
+      {{ game.attributes.map | titlecase }}:
+      {{ game.attributes.mapScore.team1 }} -
+      {{ game.attributes.mapScore.team2 }}
+    </div>
+  </div>
+  <app-comments></app-comments>
+</div>

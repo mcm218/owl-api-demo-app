@@ -1,0 +1,12 @@
+.dropdown-menu {
+  position: absolute;
+  padding: 20px;
+  top: 100%; /* Bottom of button */
+  right: 0;
+  margin-left: -100px; /* More to the left */
+}
+
+.btn {
+  background-color: rgb(250, 156, 29);
+  color: white;
+}

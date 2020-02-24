@@ -7,6 +7,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { catchError, tap } from "rxjs/operators";
 import { TeamsComponent } from "./teams/teams.component";
 import { AuthService } from "./auth.service";
+import { environment } from 'src/environments/environment';
 
 export interface Project {
   message: string;
@@ -62,7 +63,8 @@ export class DbService {
   };
   private vodsUrl = "https://api.overwatchleague.com/vods";
   private youtubeUrl =
-    "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=UUiAInBL9kUzz1XRxk66v-gw&key=AIzaSyADk-cGmdUyUWugT_pN1Huyvv0eGlQrrow";
+    "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=UUiAInBL9kUzz1XRxk66v-gw&key=" +
+    environment.youtubeKey;
 
   constructor(
     private http: HttpClient,

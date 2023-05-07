@@ -29,7 +29,7 @@
     "angularfire2": "^5.3.0",
     "bootstrap": "^4.4.1",
     "firebase": "^7.7.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ng-simple-slideshow": "^1.2.9",
     "ngx-daterange": "^1.0.17",
     "ngx-daterangepicker-material": "^2.1.11",
